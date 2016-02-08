@@ -37,7 +37,7 @@
  
 <div class="navbar">
 <div class="navbar-inner">
-<div class="center sliding"><a href="#" data-popover=".popover-iOSBazaar" class="open-popover">iOSBazaar</a></div>
+<div class="center sliding"><a href="#" class="link open-tabs-modal">iOSBazaar</a></div>
 <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
 </div>
 </div>
@@ -85,26 +85,25 @@
  
 <script src="../js/main.js"></script>
 <script src="../js/extras.js"></script>
-  <style>
-    .popover {
-      width: 200px;
-    }
-  </style>
- <div class="popover popover-iOSBazaar">
-    <div class="popover-angle"></div>
-    <div class="popover-inner">
-      <div class="list-block">
-        <ul>
-        <li><div class="messagebar">
-    <input id="nameInput" placeholder="Enter a username..." class="list-button" autofocus>
-</div>   </li>
-          <li><a href="#" class="list-button item-link">Link 1</a></li>
-          <li><a href="#" class="list-button item-link">Link 2</a></li>
-          <li><a href="#" class="list-button item-link">Link 3</a></li>
-          <li><a href="#" class="list-button item-link">Link 4</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<script>
+	$$('.open-tabs-modal').on('click', function () {
+  myApp.modal({
+    title:  '<div class="buttons-row">'+
+              '<a href="#tab1" class="button active tab-link">Tab 1</a>'+
+              '<a href="#tab2" class="button tab-link">Tab 2</a>'+
+            '</div>',
+    text: '<div class="tabs">'+
+            '<div class="tab active" id="tab1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nunc non dolor euismod feugiat. Sed at sapien nisl. Ut et tincidunt metus. Suspendisse nec risus vel sapien placerat tincidunt. Nunc pulvinar urna tortor.</div>'+
+            '<div class="tab" id="tab2">Vivamus feugiat diam velit. Maecenas aliquet egestas lacus, eget pretium massa mattis non. Donec volutpat euismod nisl in posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</div>'+
+          '</div>',
+    buttons: [
+      {
+        text: 'Ok, got it',
+        bold: true
+      },
+    ]
+  })
+});
+</script>
 </body> 
 </html> 
