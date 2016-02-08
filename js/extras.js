@@ -1,5 +1,7 @@
 var myApp = new Framework7({
-	modalTitle("iOSBazaar")
+    pushState: true,
+    swipePanel: 'left',
+    modalTitle: ("iOSBazaar")
 });
 
 var $$ = Dom7;
