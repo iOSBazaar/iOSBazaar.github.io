@@ -1,1 +1,5 @@
-var myApp=new Framework7();var $$=Dom7;
+var myApp = new Framework7({
+	modalTitle("iOSBazaar")
+});
+
+var $$ = Dom7;
