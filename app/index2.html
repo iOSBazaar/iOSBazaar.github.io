@@ -14,12 +14,7 @@
     myApp.alert('iOSBazaar is a Cydia alternative which serves to prove that you can do anything without jailbreak!<br> Copyright &copy; iOSBazaar');
 };
 </script>
-<script>
-	function iOSBazaar() {
-    var clickedLink = this;
-    myApp.popover('.popover-iOSBazaar', clickedLink);
-});
-</script>
+
 <div class="statusbar-overlay"></div>
  
 <div class="panel-overlay"></div>
@@ -42,7 +37,7 @@
  
 <div class="navbar">
 <div class="navbar-inner">
-<div class="center sliding"><a href="#" class="link open-iOSBazaar">iOSBazaar</a></div>
+<div class="center sliding"><a href="#" data-popover=".popover-iOSBazaar" class="link open-popover">iOSBazaar</a></div>
 <div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
 </div>
 </div>
@@ -91,7 +86,8 @@
 <script src="../js/main.js"></script>
 <script src="../js/extras.js"></script>
   <div class="popover popover-iOSBazaar">
-     <div class="popover-inner">
+    <div class="popover-angle"></div>
+    <div class="popover-inner">
       <div class="list-block">
         <ul>
           <li><a href="#" class="list-button item-link">Link 1</a></li>
