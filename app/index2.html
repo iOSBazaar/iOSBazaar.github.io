@@ -1,110 +1,13 @@
+<<!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/colors.css">
-<link rel="stylesheet" href="../css/iOSBazaar.css">
-<title>iOSBazaar</title> 
-<meta name="viewport" content="width=device-width">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>iOSBazaar</title>
 </head>
-<body onload="TOS()"> 
-
+<body onload="loading()" style="background-image:url(background.gif); cover no-repeat">
 <script>
-	function TOS() {
-    myApp.alert('iOSBazaar is a Cydia alternative which serves to prove that you can do anything without jailbreak!<br> Copyright &copy; iOSBazaar');
-};
+function loading() {
+    setTimeout(function(){ window.open('index3.html','_self'); }, 4000);
+}
 </script>
-
-<div class="statusbar-overlay"></div>
- 
-<div class="panel-overlay"></div>
- 
-<div class="panel panel-left panel-reveal">
-<div class="content-block">
-<p>Left panel content goes here</p>
-</div>
-</div>
- 
-<div class="panel panel-right panel-cover">
-<div class="content-block">
-<p>Right panel content goes here</p>
-</div>
-</div>
- 
-<div class="views">
- 
-<div class="view view-main">
- 
-<div class="navbar">
-<div class="navbar-inner">
-<div class="center sliding"><a href="#" class="link open-tabs-modal">iOSBazaar</a></div>
-<div class="right"><a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a></div>
-</div>
-</div>
- 
-<div class="pages navbar-through toolbar-through">
- 
-<div data-page="index" class="page">
-<div class="page-content">
-<div class="content-block-title">Welcome To The iOSBazaar</div>
-<div class="content-block">
-<div class="content-block-inner">
-<p>The best iOS market. Copyright 2016 - 2017.</p>
-</div>
-</div>
-<div class="list-block">
-<ul>
-<li><a href="#" data-template="about" data-context-name="about" class="item-link item-content">
-<div class="item-inner">
-<div class="item-title">Packages</div>
-</div></a></li>
-<li><a href="projects.html" class="item-link item-content">
-<div class="item-inner">
-<div class="item-title">My Projects</div>
-</div></a></li>
-<li><a href="cars.html" data-context-name="cars" class="item-link item-content">
-<div class="item-inner">
-<div class="item-title">My Cars</div>
-</div></a></li>
-<li><a href="contacts.html" class="item-link item-content">
-<div class="item-inner">
-<div class="item-title">Contacts</div>
-</div></a></li>
-</ul>
-</div>
-<div class="content-block-title">About</div>
-<div class="content-block">
-<div class="row">
-<div class="col-50"><a href="#" data-panel="left" class="button open-panel">Team</a></div>
-<div class="col-50"><a href="#" data-panel="right" class="button open-panel">Change Log</a></div>
-</div>
-</div>
-</div>
-</div>
-</div>
- 
-<script src="../js/main.js"></script>
-<script src="../js/extras.js"></script>
-<script>
-	$$('.open-tabs-modal').on('click', function () {
-  myApp.modal({
-    title:  '<div class="buttons-row">'+
-              '<a href="#tab1" class="button active tab-link">Manage</a>'+
-              '<a href="#tab2" class="button tab-link">TOS</a>'+
-            '</div>',
-    text: '<div class="tabs">'+
-            '<div class="tab active" id="tab1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam convallis nunc non dolor euismod feugiat. Sed at sapien nisl. Ut et tincidunt metus. Suspendisse nec risus vel sapien placerat tincidunt. Nunc pulvinar urna tortor.</div>'+
-            '<div class="tab" id="tab2">iOSBazaar Is Not Responsible For Anything That Happens To Your Device While Using This App Or Downloading Anything From This App. All Downloads And Links From Verified Repositories Are Safe And Will Not Do Any Damage To Your Device. So Please Be Careful When Downloading Or Clicking On Links From Other Repositories.</div>'+
-          '</div>',
-    buttons: [
-      {
-        text: 'Ok, got it',
-        bold: true
-      },
-    ]
-  })
-});
-</script>
-</body> 
-</html> 
+</body>
+</html>
