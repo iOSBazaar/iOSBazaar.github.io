@@ -8,6 +8,5 @@
 <li>Make defualt repo.</li>
 <hr> 
 </br>
-<hr> 
 </br>
 <h3><b>Version 1.0.0</b></h3>
