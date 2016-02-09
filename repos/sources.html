@@ -1,0 +1,21 @@
+<div class="navbar">
+		<div class="navbar-inner navbar-on-center">
+				<div class="left">
+						<a href="#" onclick="reloadSources()" class="btn-reload">Refresh</a>
+				</div>
+				<div class="center sliding" style="left: -15.5px; transform: translate3d(0px, 0px, 0px);">Repos</div>
+				<div class="right">
+						<a href="#" class="add-repo link" onClick="addRepository();">Add</a>
+				</div>
+		</div>
+</div>
+<div class="pages navbar-through">
+		<div data-page="repos-list" class="page">
+				<div class="page-content" style="background:#fff; background-size: cover;">
+					<div class="list-block media-list" style="margin-top:0px;">
+						<ul class="inner-repos">
+						</ul>
+					</div>
+				</div>
+		</div>
+</div>
