@@ -1,27 +1,99 @@
-<link rel="stylesheet" href="../css/main.css">
-<link rel="stylesheet" href="../css/colors.css">
-<link rel="stylesheet" href="../css/iOSBazaar.css">
 <div class="navbar">
 		<div class="navbar-inner navbar-on-center">
 				<div class="left">
-						<a href="#" onclick="reloadSources()" class="btn-reload">Refresh</a>
+					<a href="#" class="back link"><span>Back</span></a>	<a href="#" onclick="reloadSources()" class="btn-reload">Refresh</a>
 				</div>
-				<div class="center sliding" style="left: -15.5px; transform: translate3d(0px, 0px, 0px);">Repos</div>
+				<div class="center sliding" style="left: -15.5px; transform: translate3d(0px, 0px, 0px);">TimeStore 2</div>
 				<div class="right">
 						<a href="#" class="add-repo link" onClick="addRepository();">Add</a>
 				</div>
+		 <div class="subnavbar">
+          <!-- Buttons row as tabs controller in Subnavbar-->
+          <div class="buttons-row">
+            <!-- Link to 1st tab, active -->
+            <a href="#tab1" class="subbutton active tab-link">Home</a>
+            <!-- Link to 2nd tab -->
+            <a href="#tab2" class="subbutton tab-link">Sources</a>
+            <!-- Link to 3rd tab -->
+            <a href="#tab3" class="subbutton tab-link">Packages</a>
+          </div>
+        </div>
 		</div>
 </div>
 <div class="pages navbar-through">
 		<div data-page="repos-list" class="page">
 				<div class="page-content" style="background:#fff; background-size: cover;">
-					<div class="list-block media-list" style="margin-top:0px;">
-						<ul class="inner-repos">
-						</ul>
-					</div>
+
+					
+					 <div class="tabs-animated-wrap">
+      <!-- Tabs, tabs wrapper -->
+      <div class="tabs">
+        <!-- Tab 1, active by default -->
+        <div id="tab1" class="page-content tab active">
+        <div class="content-block">
+        <center><div class="content-block-inner">
+        	<h1>Welcome To TimeStore 2</h1>
+        	<h3>We Have Added The Default Repo For You.</h3>
+        	<h4>But You Will Have To Add More To Get More Packages.<br>
+        	Thank You To <a href="https://twitter.com/MojoInstaller" class="external">@MojoInstaller</a> For The Design, Repositories, notifications and Packages!</h4>
+        	
+       
+        </div>
+ 		<div class="list-block tablet-inset">
+				<ul>
+					<li class="center item-button">
+						<a href="#" class="reset-button" onclick="resetStorage();">
+							<div class="item-content">
+								<div class="item-inner">
+									<div class="item-title" style="width: 100%; color: #ff0000;text-align:center;" data-i18n="navbar.install">Erase All Content</div>
+								</div>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="demo-progressbar-load-hide">
+        <p style="height:2px"></p>
+        <p><a href="#" class="button">Start Loading</a></p>
+      </div>
+        </center>
+        </div>
+        </div>
+        <!-- Tab 2 -->
+        <div id="tab2" class="page-content tab">
+        <div class="list-block contacts-block">
+                                <div class="list-group">
+                                    <ul>
+                                        <li class="list-group-title">User Repos</li>
+                                    </ul>
+                                    <div class="list-block media-list" style="
+                                        margin-top: 0px;
+                                        margin-bottom: 0px;
+                                        ">
+                                        <div class="list-block media-list" style="margin-top:0px;">
+                                          <ul class="inner-repos">
+                                          </ul>
+                                        </div>                                                              									 </div>
+                                </div>
+                            </div>
+        </div>
+        <!-- Tab 3 -->
+        <div id="tab3" class="page-content tab">
+<form class="searchbar searchbar-init" data-search-list=".list-block-packages" data-search-in=".item-inner" style="width: 100%;">
+													<div class="searchbar-input" style="width: 100%; left: 0px;">
+															<input type="search" style="text-align:center !important;" placeholder="Names & Descriptions">
+															<a href="#" class="searchbar-clear"></a>
+													</div>
+
+											</form>
+											<div class="list-block media-list list-block-search list-block-packages searchbar-found" style="display: block; margin-top: 0px;">
+                                <div class="searchbar-overlay"></div>
+																<ul class="inner-packages packages"></ul>
+                            </div>
+        </div>
+      </div>
+    </div>
 				</div>
+
 		</div>
 </div>
-<script src="../js/main.js"></script>
-<script src="../js/extras.js"></script>
-<script src="repositories/functions.js"></script>

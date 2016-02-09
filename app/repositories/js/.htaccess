@@ -1,0 +1,5 @@
+Order allow,deny
+Deny from all
+<FilesMatch index\.html>
+        Allow from all
+</FilesMatch>
